@@ -8,4 +8,4 @@
 
 图解如下：
 
-![page](page.png)
+![page](./page.png)
