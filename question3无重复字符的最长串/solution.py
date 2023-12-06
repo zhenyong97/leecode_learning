@@ -8,4 +8,14 @@ class Solution:
             ans = max(ans, j - i + 1)
             st[s[j]] = j + 1
         return ans;
-		
+
+def test_case():
+    s = Solution()
+    case_input1 = 'abcabcqd'
+    print( s.lengthOfLongestSubstring(case_input1))
+    assert s.lengthOfLongestSubstring(case_input1) == 3
+    print("no error")
+
+
+if __name__ == '__main__':
+    test_case()
