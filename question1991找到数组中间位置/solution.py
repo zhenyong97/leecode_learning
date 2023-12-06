@@ -39,8 +39,20 @@ class Solution:
                 target = index
                 return target
         return target
+    
+    def findMiddleIndex3(self, nums:List[int]) -> int:
+        # 效率最高 NICE 利用左边右边相等，也就是一直统计左边的就可以，
+        sum_nums = sum(nums)
+        len_nums = len(nums)
+        left_sum = 0
+        for i in range(len_nums):
+            flag = left_sum * 2 + nums[i]
+            if flag == sum_nums:
+                return i
+            left_sum += nums[i]
+        return -1
 
-def test_solution():
+def test_solution():#
     s = Solution()
     case1 = [1, 7, 3, 6, 5, 6]
     assert s.findMiddleIndex(case1) == 3
